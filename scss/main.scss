@@ -1,0 +1,14 @@
+@use "sass:color";
+
+// variables //
+@import "variables.scss";
+
+
+// mixins
+@import "componentes/mixins";
+
+
+// sitio
+@import "componentes/portada";
+@import "componentes/teaser";
+

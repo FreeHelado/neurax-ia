@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "sass": "^1.79.4"
+  },
+  "scripts": {
+    "dale-sass": "sass --watch scss/main.scss css/main.css",
+    "sourcemap-sass": "sass --watch scss/main.scss css/main.css --source-map"
+  }
+}
