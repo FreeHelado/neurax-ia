@@ -51,6 +51,11 @@ body {
         letter-spacing: .42em;
         font-size: .95rem;
         font-weight: 600;
+
+        svg {
+            fill: #fff;
+            height: 35px;
+        }
     }
 
     &__nav-link {
@@ -89,6 +94,79 @@ body {
         letter-spacing: -.08em;
         font-weight: 300;
     }
+
+    &__media {
+        position: relative;
+        z-index: 2;
+        //height: min(68vh, 660px);
+        border-radius: 40px;
+        overflow: hidden;
+        border: 1px solid rgba($colorTexto, .08);
+        background: rgba($colorTexto, .04);
+        box-shadow:
+            inset 0 0 80px rgba($colorPrimario, .08),
+            0 0 90px rgba($colorPrimario, .08);
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(#000, .72), rgba(#000, .15)),
+                radial-gradient(circle at 70% 30%, rgba($colorPrimario, .22), transparent 45%);
+            pointer-events: none;
+        }
+    }
+
+    &__video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        filter: grayscale(.15) contrast(1.05) brightness(.82);
+    }
+
+    &__media-glow {
+        position: absolute;
+        right: -10%;
+        bottom: -16%;
+        width: 70%;
+        height: 50%;
+        background: radial-gradient(circle, rgba($colorPrimario, .35), transparent 62%);
+        filter: blur(42px);
+        pointer-events: none;
+    }
+
+    &__video-controls {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+        z-index: 4;
+        display: flex;
+        gap: 12px;
+    }
+
+    &__video-btn {
+        width: 48px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 1px solid rgba($colorPrimario, .55);
+        background: rgba(#000, .35);
+        color: $colorTexto;
+        backdrop-filter: blur(12px);
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        transition: .25s ease;
+
+        &:hover {
+            background: rgba($colorPrimario, .18);
+            box-shadow: 0 0 35px rgba($colorPrimario, .25);
+            transform: translateY(-2px);
+        }
+    }
+        
 
     &__text {
         max-width: 560px;
