@@ -276,6 +276,121 @@ body {
     align-items: flex-start;
   }
 }
+.neurax__access {
+  padding: 120px clamp(24px, 6vw, 90px);
+  border-top: 1px solid rgba(245, 247, 250, 0.08);
+}
+.neurax__access p {
+  max-width: 900px;
+  margin: 24px 0 0;
+  font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 300;
+}
+.neurax__social {
+  margin-top: 60px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.neurax__social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #f5f7fa;
+  background: rgba(245, 247, 250, 0.04);
+  border: 1px solid rgba(245, 247, 250, 0.08);
+  transition: 0.25s ease;
+}
+.neurax__social-link i {
+  font-size: 1.1rem;
+  color: #9fd8ff;
+}
+.neurax__social-link span {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.neurax__social-link:hover {
+  border-color: rgba(159, 216, 255, 0.35);
+  background: rgba(159, 216, 255, 0.08);
+  box-shadow: 0 0 30px rgba(159, 216, 255, 0.15);
+  transform: translateY(-2px);
+}
+.neurax__footer {
+  padding: 40px clamp(24px, 6vw, 90px);
+  border-top: 1px solid rgba(245, 247, 250, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.neurax__footer-logo {
+  font-size: 0.85rem;
+  letter-spacing: 0.45em;
+  font-weight: 600;
+  opacity: 0.6;
+}
+.neurax__footer .neurax__social {
+  margin-top: 0;
+}
+.neurax__footer .neurax__social a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #f5f7fa;
+  text-decoration: none;
+  border: 1px solid rgba(245, 247, 250, 0.08);
+  background: rgba(245, 247, 250, 0.04);
+  transition: 0.25s ease;
+}
+.neurax__footer .neurax__social a:hover {
+  color: #9fd8ff;
+  border-color: rgba(159, 216, 255, 0.35);
+  background: rgba(159, 216, 255, 0.08);
+  box-shadow: 0 0 24px rgba(159, 216, 255, 0.18);
+}
+.neurax__values {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.neurax__value {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(245, 247, 250, 0.04);
+  border: 1px solid rgba(245, 247, 250, 0.08);
+}
+.neurax__value strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #9fd8ff;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.neurax__value span {
+  color: rgba(245, 247, 250, 0.65);
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .neurax__values {
+    grid-template-columns: 1fr;
+  }
+  .neurax__footer {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+}
 
 * {
   box-sizing: border-box;
